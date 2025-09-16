@@ -8,7 +8,6 @@
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body class="font-sans text-gray-800 bg-white">
-  <!-- ?? HEADER -->
   <header class="fixed top-0 w-full bg-white shadow z-50">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-20">
       <div class="flex items-center space-x-4">
@@ -25,151 +24,206 @@
     </div>
   </header>
 
-  <!-- ?? HERO -->
   <section id="inicio" class="pt-28 bg-indigo-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <h1 class="text-4xl font-extrabold text-gray-900 reveal-top">Conectamos talento con oportunidades</h1>
-      <p class="mt-4 text-lg text-gray-600 reveal-top">Impulsamos tu crecimiento profesional y organizacional</p>
-      <div class="mt-6 reveal-bottom">
-        <a href="#candidatos" class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition">Quiero postularme</a>
-        <a href="#empresas" class="ml-4 px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-100 transition">Soy empresa</a>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-20">
+      <div class="reveal-left">
+        <h1 class="text-4xl font-extrabold leading-tight text-gray-900">Conectamos <span class="text-indigo-600">personas</span> y <span class="text-indigo-600">empresas</span> para crecer juntos</h1>
+        <p class="mt-6 text-lg text-gray-600">Nuestra mision es conectar empresas con el mejor talento, impulsando el crecimiento de las personas y organizaciones. Se valora el compromiso, responsabilidad, transparencia y cercanía.</p>
+        <div class="mt-8 flex space-x-4">
+          <a href="#servicios" class="px-6 py-3 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700 transition">Nuestros servicios</a>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <img src="https://res.cloudinary.com/dh1qqui2h/image/upload/v1757985917/IMG-20250915-WA0089_1_npmqvs.jpg" alt="Equipo consultora" class="rounded-lg shadow-lg object-cover w-full h-96">
       </div>
     </div>
   </section>
 
-  <!-- ?? SERVICIOS -->
-  <section id="servicios" class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center reveal-top">Nuestros Servicios</h2>
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow reveal-bottom text-center">
-          <h3 class="text-xl font-semibold mb-2">Selección de Talento</h3>
-          <p class="text-gray-600">Encontramos el perfil ideal para tu empresa.</p>
+  
         </div>
-        <div class="bg-white p-6 rounded-lg shadow reveal-bottom text-center">
-          <h3 class="text-xl font-semibold mb-2">Consultoría RRHH</h3>
-          <p class="text-gray-600">Optimizamos tus procesos de recursos humanos.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow reveal-bottom text-center">
-          <h3 class="text-xl font-semibold mb-2">Coaching Profesional</h3>
-          <p class="text-gray-600">Desarrollamos el potencial de tus equipos.</p>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <!-- ?? FORMULARIO CANDIDATOS -->
+
   <section id="candidatos" class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center reveal-top">Carga tu CV</h2>
-      <p class="mt-2 text-center text-gray-600 reveal-top">Dejanos tus datos y nos pondremos en contacto con vos.</p>
-      <form id="form-candidatos" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow reveal-bottom mt-10 max-w-2xl mx-auto">
-        <input type="hidden" name="formType" value="candidatos">
-        <div class="grid grid-cols-1 gap-4">
-          <input name="nombre" class="border rounded px-3 py-2" placeholder="Nombre completo" required>
-          <input name="email" class="border rounded px-3 py-2" placeholder="Email" type="email" required>
-          <input name="telefono" class="border rounded px-3 py-2" placeholder="Teléfono" type="tel">
-          <label class="block text-sm font-medium text-gray-700">Adjuntar CV (PDF, DOCX)</label>
-          <input type="file" name="cv" class="border rounded px-3 py-2 w-full" accept=".pdf,.doc,.docx" required>
-          <div class="flex justify-end">
-            <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">Enviar</button>
-          </div>
-        </div>
-      </form>
-      <div id="status-candidatos" class="text-center mt-2 text-sm"></div>
-    </div>
-  </section>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center reveal-top">Carga tu CV</h2>
+    <p class="mt-2 text-center text-gray-600 reveal-top">
+      Dejanos tus datos y nos pondremos en contacto con vos para futuras oportunidades.
+    </p>
 
-  <!-- ?? FORMULARIO EMPRESAS -->
+    <form 
+      action="https://formsubmit.co/peresotticr@gmail.com" 
+      method="POST" 
+      enctype="multipart/form-data"
+      class="bg-white p-6 rounded-lg shadow reveal-bottom mt-10 max-w-2xl mx-auto"
+    >
+      <!-- Desactiva el captcha -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Evita redirección (opcional, puede dejarse vacío) -->
+      <input type="hidden" name="_next" value="">
+
+      <div class="grid grid-cols-1 gap-4">
+        <input 
+          class="border rounded px-3 py-2" 
+          placeholder="Nombre completo" 
+          name="nombre" 
+          required
+        >
+        <input 
+          class="border rounded px-3 py-2" 
+          placeholder="Email" 
+          type="email" 
+          name="email" 
+          required
+        >
+        <input 
+          class="border rounded px-3 py-2" 
+          placeholder="Teléfono" 
+          type="tel" 
+          name="telefono"
+        >
+
+        <label for="cv_file" class="block text-sm font-medium text-gray-700">
+          Adjuntar Curriculum Vitae (PDF, DOCX)
+        </label>
+        <input 
+          type="file" 
+          id="cv_file" 
+          name="cv_file" 
+          class="border rounded px-3 py-2 w-full" 
+          accept=".pdf,.doc,.docx" 
+          required
+        >
+
+        <div class="flex items-center justify-between">
+          <button 
+            type="submit" 
+            class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+          >
+            Enviar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
   <section id="empresas" class="py-20">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center reveal-top">¿Sos una empresa?</h2>
-      <p class="mt-2 text-center text-gray-600 reveal-top">Completá el formulario y te contactamos.</p>
-      <form id="form-empresas" class="bg-white p-6 rounded-lg shadow reveal-bottom mt-10 max-w-2xl mx-auto">
-        <input type="hidden" name="formType" value="empresas">
+      <p class="mt-2 text-center text-gray-600 reveal-top">Completa el formulario y nos contactaremos para ayudarte a encontrar el talento que necesitas.</p>
+      <form class="bg-white p-6 rounded-lg shadow reveal-bottom mt-10 max-w-2xl mx-auto">
         <div class="grid grid-cols-1 gap-4">
-          <input name="empresa" class="border rounded px-3 py-2" placeholder="Nombre de la empresa" required>
-          <input name="nombre" class="border rounded px-3 py-2" placeholder="Tu nombre y apellido" required>
-          <input name="email" class="border rounded px-3 py-2" placeholder="Email corporativo" type="email" required>
-          <input name="puesto" class="border rounded px-3 py-2" placeholder="Puesto a cubrir" required>
-          <textarea name="mensaje" class="border rounded px-3 py-2 h-28" placeholder="Descripción del puesto o mensaje" required></textarea>
+          <input class="border rounded px-3 py-2" placeholder="Nombre de la empresa" required>
+          <input class="border rounded px-3 py-2" placeholder="Tu nombre y apellido" required>
+          <input class="border rounded px-3 py-2" placeholder="Email corporativo" type="email" required>
+          <input class="border rounded px-3 py-2" placeholder="Puesto a cubrir" required>
+          <textarea class="border rounded px-3 py-2 h-28" placeholder="Descripción del puesto o mensaje" required></textarea>
           <div class="flex justify-end">
             <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">Enviar solicitud</button>
           </div>
         </div>
       </form>
-      <div id="status-empresas" class="text-center mt-2 text-sm"></div>
     </div>
   </section>
 
-  <!-- ?? FORMULARIO CONTACTO -->
+  
+
+  <section id="nosotros" class="bg-indigo-700 text-white py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="reveal-left">
+        <h2 class="text-3xl font-bold">Sobre nosotros</h2>
+        <p class="mt-4 text-indigo-100">Somos un equipo multidisciplinario ayudando a empresas a crecer mediante la gestión estratégica del talento.</p>
+        <ul class="mt-6 space-y-2 text-indigo-100 list-disc list-inside">
+          <li>Misión: generar valor conectando personas y organizaciones.</li>
+          <li>Visión: ser líderes en consultoría de RRHH en Argentina.</li>
+          <li>Valores: ética, compromiso, innovación y cercanía.</li>
+        </ul>
+      </div>
+      <div class="reveal-right">
+        <img src="https://res.cloudinary.com/dh1qqui2h/image/upload/v1757986829/recursos-humanos-de-una-empresa_zzsrbs.jpg" alt="Nuestro equipo" class="rounded-lg shadow-lg object-cover w-full h-96">
+      </div>
+    </div>
+  </section>
+
+
   <section id="contacto" class="py-20">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10">
       <div class="reveal-left">
         <h2 class="text-3xl font-bold">Contacto</h2>
         <p class="mt-4 text-gray-600">Completá el formulario y te responderemos a la brevedad.</p>
-        <p class="mt-2 text-gray-600">?? Córdoba, Argentina</p>
-        <p class="mt-2 text-gray-600">?? conexiontalento@gmail.com</p>
+        <dl class="mt-6 space-y-4 text-sm text-gray-700">
+          <div>
+            <dt class="font-semibold">Teléfono</dt>
+            <dd class="mt-1">+5493513125457</dd>
+          </div>
+          <div>
+            <dt class="font-semibold">Email</dt>
+            <dd class="mt-1">conexiontalento@gmail.com</dd>
+          </div>
+          <div>
+            <dt class="font-semibold">Dirección</dt>
+            <dd class="mt-1">Cordoba, Argentina</dd>
+          </div>
+        </dl>
       </div>
-      <form id="form-contacto" class="bg-white p-6 rounded-lg shadow reveal-right">
-        <input type="hidden" name="formType" value="contacto">
+      <form class="bg-white p-6 rounded-lg shadow reveal-right">
         <div class="grid grid-cols-1 gap-4">
-          <input name="nombre" class="border rounded px-3 py-2" placeholder="Nombre" required>
-          <input name="email" class="border rounded px-3 py-2" placeholder="Email" type="email" required>
-          <input name="telefono" class="border rounded px-3 py-2" placeholder="Teléfono">
-          <textarea name="mensaje" class="border rounded px-3 py-2 h-28" placeholder="Mensaje" required></textarea>
+          <input class="border rounded px-3 py-2" placeholder="Nombre" required>
+          <input class="border rounded px-3 py-2" placeholder="Email" type="email" required>
+          <input class="border rounded px-3 py-2" placeholder="Teléfono">
+          <textarea class="border rounded px-3 py-2 h-28" placeholder="Mensaje" required></textarea>
           <div class="flex justify-end">
             <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">Enviar</button>
           </div>
         </div>
       </form>
-      <div id="status-contacto" class="text-center mt-2 text-sm col-span-2"></div>
     </div>
   </section>
 
-  <!-- ? FOOTER -->
   <footer class="bg-gray-900 text-gray-200 py-10">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <p>&copy; 2025 Conexion Talento RH. Todos los derechos reservados.</p>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="reveal-bottom">
+        <h4 class="font-semibold">Conexion Talento RH</h4>
+        <p class="mt-2 text-sm">Soluciones de RRHH para un crecimiento sostenible.</p>
+      </div>
+      <div class="reveal-bottom">
+        <h4 class="font-semibold">Enlaces rápidos</h4>
+        <ul class="mt-2 space-y-2 text-sm">
+          <li><a href="#servicios" class="hover:text-white transition">Servicios</a></li>
+          <li><a href="#candidatos" class="hover:text-white transition">Candidatos</a></li>
+          <li><a href="#empresas" class="hover:text-white transition">Empresas</a></li>
+          <li><a href="#nosotros" class="hover:text-white transition">Nosotros</a></li>
+          <li><a href="#contacto" class="hover:text-white transition">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="reveal-bottom">
+        <h4 class="font-semibold">Suscripción</h4>
+        <p class="mt-2 text-sm">Recibí novedades y oportunidades laborales.</p>
+        <form class="mt-3 flex gap-2">
+          <input placeholder="Email" class="px-3 py-2 rounded bg-gray-800 text-sm w-full">
+          <button class="px-3 py-2 bg-indigo-600 rounded text-white text-sm">OK</button>
+        </form>
+      </div>
     </div>
+    <div class="mt-8 border-t border-gray-800 pt-6 text-sm text-center">© 2025 Conexion Talento RH. Todos los derechos reservados.</div>
   </footer>
 
-  <!-- ?? BOTÓN WHATSAPP -->
-  <a href="https://wa.me/5493513125457" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110" target="_blank">
-    <img src="https://res.cloudinary.com/dh1qqui2h/image/upload/v1757987932/WhatsApp.svg_yp3jt4.webp" class="h-8 w-8">
+  <a href="https://wa.me/5493513125457" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110" target="_blank" aria-label="Contactar por WhatsApp">
+    <img src="https://res.cloudinary.com/dh1qqui2h/image/upload/v1757987932/WhatsApp.svg_yp3jt4.webp" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.477 2 2 6.477 2 12c0 5.297 4.14 9.61 9.474 9.94l.026.002.002-.002c.088-.004.177-.006.264-.006 5.523 0 10-4.477 10-10S17.523 2 12 2zm3.336 12.064c-.09.2-.23.27-.4.32-.17.06-.35.08-.54.06-.17-.03-1.01-.47-1.17-.52-.15-.05-.26-.04-.37.1-.1.14-.37.49-.45.58-.09.1-.17.11-.31.04-.15-.08-.6-.22-.92-.51-.31-.29-.51-.71-.57-.82-.07-.1-.01-.15.06-.21.05-.04.11-.11.16-.17.05-.07.08-.12.1-.22.03-.1-.01-.19-.1-.31-.08-.12-.34-.82-.47-1.12-.13-.3-.26-.26-.37-.26-.11 0-.25-.01-.39-.01-.14 0-.37.05-.56.23-.19.18-.73.72-.73 1.76 0 1.04.75 2.04.85 2.19.1.15 1.41 2.21 3.42 3.05 2.01.84 2.41.63 2.85.58.44-.06 1.41-.57 1.61-1.14.2-.56.2-.95.14-1.05-.06-.1-.19-.15-.4-.22z"/>
+    </svg>
   </a>
 
-  <!-- ?? SCRIPT -->
   <script>
     ScrollReveal().reveal('.reveal-top', { origin: 'top', distance: '40px', duration: 1000, easing: 'ease-out', interval: 150 });
     ScrollReveal().reveal('.reveal-bottom', { origin: 'bottom', distance: '40px', duration: 1000, easing: 'ease-out', interval: 150 });
     ScrollReveal().reveal('.reveal-left', { origin: 'left', distance: '60px', duration: 1000, easing: 'ease-out' });
     ScrollReveal().reveal('.reveal-right', { origin: 'right', distance: '60px', duration: 1000, easing: 'ease-out' });
-
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyulfdYO4hPIt4Ml2KNn3K7AdWARsnNzEW7L0M2O6oib-UInVJcNQN7e8bzRm03K-io/exec';
-
-    function conectarForm(idForm, idStatus){
-      const form = document.getElementById(idForm);
-      const status = document.getElementById(idStatus);
-      form.addEventListener('submit', e=>{
-        e.preventDefault();
-        status.textContent = 'Enviando...';
-        const data = new FormData(form);
-        fetch(SCRIPT_URL, { method:'POST', body:data })
-        .then(r=>r.text())
-        .then(t=>{
-          if(t==='OK'){ status.textContent='Formulario enviado ?'; form.reset(); }
-          else{ status.textContent='Error: '+t; }
-        })
-        .catch(err=>{ status.textContent='Error de red: '+err; });
-      });
-    }
-
-    conectarForm('form-candidatos','status-candidatos');
-    conectarForm('form-empresas','status-empresas');
-    conectarForm('form-contacto','status-contacto');
   </script>
 </body>
+
 </html>
 
 
