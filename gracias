@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracias - Conexión Talento RH</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <section class="min-h-screen flex items-center justify-center px-6">
+    <div class="bg-white rounded-lg shadow-lg p-10 max-w-md text-center">
+      <!-- Ícono de check -->
+      <svg class="mx-auto mb-6 w-16 h-16 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+      </svg>
+      
+      <h1 class="text-3xl font-bold text-gray-800 mb-4">
+        ¡Gracias por tu envío!
+      </h1>
+
+      <p class="text-gray-600 mb-8">
+        Hemos recibido tu información correctamente.  
+        Nos pondremos en contacto contigo a la brevedad.
+      </p>
+
+      <a href="https://conexiontalentorh.netlify.app/"
+         class="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition">
+        Volver a la página principal
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
